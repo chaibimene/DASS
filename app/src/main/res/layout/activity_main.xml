@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:padding="16dp">
+
+    <!-- FORWARD Button -->
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:text="FORWARD"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:textColor="@color/accent" />
+
+    <!-- Circular Speed Progress Indicator -->
+
+    <!-- Car Image -->
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/btnForward"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="32dp">
+
+        <!-- Circular Progress Indicator -->
+
+        <!-- Speed Text Overlay -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circularSpeedIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:progress="60"
+            app:indicatorColor="@color/accent"
+            app:indicatorSize="100dp"
+            app:trackColor="@color/secondary_text"
+            app:trackThickness="12dp" />
+
+        <TextView
+            android:id="@+id/speedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="60 km/h"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/carImage"
+        android:layout_width="248dp"
+        android:layout_height="217dp"
+        android:layout_below="@id/btnForward"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-4dp"
+        android:contentDescription="Car"
+        android:src="@drawable/car_image" />
+
+    <!-- Left Curved Lines -->
+    <ImageView
+        android:id="@+id/lineLeft1"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@id/carImage"
+        android:src="@drawable/vertical_red"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/lineLeft2"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_toStartOf="@id/carImage"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/vertical_yellow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/lineLeft3"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_toStartOf="@id/carImage"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/vertical_green"
+        android:visibility="invisible" />
+
+    <!-- Right Curved Lines -->
+    <ImageView
+        android:id="@+id/lineRight1"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_toEndOf="@id/carImage"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vertical_red"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/lineRight2"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_toEndOf="@id/carImage"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vertical_yellow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/lineRight3"
+        android:layout_width="18dp"
+        android:layout_height="139dp"
+        android:layout_toEndOf="@id/carImage"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vertical_green"
+        android:visibility="invisible" />
+
+    <!-- REVERSE Button -->
+    <Button
+        android:id="@+id/btnReverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carImage"
+        android:layout_centerHorizontal="true"
+        android:text="REVERSE"
+        android:textAllCaps="true"
+        android:background="#00000000"
+        android:textColor="@color/accent"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:textSize="16sp"/>
+    <!-- Right Curved Lines -->
+    <ImageView
+        android:id="@+id/lineBack1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnReverse"
+
+        android:src="@drawable/curved_line_red"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp" />
+
+    <ImageView
+        android:id="@+id/lineBack2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnReverse"
+
+        android:src="@drawable/curved_line_yellow"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp" />
+
+    <ImageView
+        android:id="@+id/lineBack3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnReverse"
+
+        android:src="@drawable/curved_line_green"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp" />
+
+    <!-- Localisation Text -->
+    <TextView
+        android:id="@+id/localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnReverse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="LOCALISATION"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/accent"
+        android:textSize="16sp" />
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/btnForward"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="32dp">
+        <!-- Stop Sign -->
+        <ImageView
+            android:id="@+id/stopSign"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@id/imageView3"
+            android:layout_alignBottom="@id/imageView2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/stop"
+            android:contentDescription="Stop Sign"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="119dp"
+            android:layout_height="112dp"
+            app:srcCompat="@drawable/feu"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            app:srcCompat="@drawable/vitesse"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

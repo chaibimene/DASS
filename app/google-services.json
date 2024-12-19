@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "733718560338",
+    "project_id": "dass-2a23c",
+    "storage_bucket": "dass-2a23c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733718560338:android:57883bc9fe6a86232ee98b",
+        "android_client_info": {
+          "package_name": "com.example.dass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCb2dvzByiZkk_knHaUSGyECh8o_-F9E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
